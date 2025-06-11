@@ -6,6 +6,7 @@ require('dotenv').config();
 const { sequelize } = require('./src/models');
 const WebhookService = require('./src/services/webhooks');
 const SchedulerService = require('./src/services/scheduler');
+const ApiServer = require('./src/api/server');
 
 // Validate required environment variables
 if (!process.env.DISCORD_TOKEN) {
@@ -30,6 +31,7 @@ const client = new Client({
 // Initialize services
 client.webhookService = new WebhookService();
 client.schedulerService = new SchedulerService(client.webhookService);
+client.apiServer = new ApiServer(client.webhookService, client.schedulerService);
 
 // Commands collection
 client.commands = new Collection();
@@ -100,6 +102,11 @@ client.once(Events.ClientReady, async (readyClient) => {
     await client.schedulerService.initializeScheduledJobs();
     console.log('✅ Scheduler initialized');
     
+    // Start API server
+    const apiPort = process.env.API_PORT || 9000;
+    await client.apiServer.start(apiPort);
+    console.log('✅ API Server initialized');
+    
     // Set bot status
     readyClient.user.setActivity('🤖 Managing Robot Team', { type: 'WATCHING' });
     
@@ -108,6 +115,7 @@ client.once(Events.ClientReady, async (readyClient) => {
     console.log(`📡 Webhooks active: ${client.webhookService.getWebhookCount()}`);
     console.log(`⏰ Scheduled jobs: ${client.schedulerService.getJobCount()}`);
     console.log(`🌐 Connected to guild: ${process.env.GUILD_ID}`);
+    console.log(`🔌 API Server: http://localhost:${apiPort}`);
     
   } catch (error) {
     console.error('❌ Initialization error:', error);

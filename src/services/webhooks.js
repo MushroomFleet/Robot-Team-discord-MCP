@@ -75,6 +75,10 @@ class WebhookService {
     return this.webhooks.get(robotId);
   }
 
+  getWebhookCount() {
+    return this.webhooks.size;
+  }
+
   async sendMessage(robotId, options) {
     const webhook = this.getWebhook(robotId);
     if (!webhook) {
@@ -156,10 +160,6 @@ class WebhookService {
       console.error(`❌ Webhook test failed for robot ${robotId}:`, error);
       return { success: false, error: error.message };
     }
-  }
-
-  getWebhookCount() {
-    return this.webhooks.size;
   }
 
   getActiveRobots() {

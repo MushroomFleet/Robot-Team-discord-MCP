@@ -1,26 +1,49 @@
 /**
- * Utility for getting proper robot names
+ * Robot naming utilities
  */
-const robotNames = {
-  1: 'DJZ Clone 1',
-  2: 'DJZ Clone 2',
-  3: 'DJZ Clone 3',
-  4: 'DJZ Clone 4',
-  5: 'DJZ Clone 5',
-  6: 'DJZ Clone 6',
-  7: 'DJZ Clone 7'
+
+const ROBOT_NAMES = {
+  1: ':one::robot:',
+  2: ':two::robot:',
+  3: ':three::robot:',
+  4: ':four::robot:',
+  5: ':five::robot:',
+  6: ':six::robot:',
+  7: ':seven::robot:'
 };
 
 /**
- * Get the proper name for a robot
+ * Get the display name for a robot
  * @param {number} robotId - Robot ID (1-7)
- * @returns {string} - Proper robot name
+ * @returns {string} Robot display name
  */
 function getRobotName(robotId) {
-  return robotNames[robotId] || `DJZ Clone ${robotId}`;
+  if (robotId < 1 || robotId > 7) {
+    throw new Error('Robot ID must be between 1 and 7');
+  }
+  return ROBOT_NAMES[robotId];
+}
+
+/**
+ * Get all robot names
+ * @returns {Object} Object with robotId as keys and names as values
+ */
+function getAllRobotNames() {
+  return { ...ROBOT_NAMES };
+}
+
+/**
+ * Validate robot ID
+ * @param {number} robotId - Robot ID to validate
+ * @returns {boolean} True if valid
+ */
+function isValidRobotId(robotId) {
+  return Number.isInteger(robotId) && robotId >= 1 && robotId <= 7;
 }
 
 module.exports = {
-  robotNames,
-  getRobotName
+  getRobotName,
+  getAllRobotNames,
+  isValidRobotId,
+  ROBOT_NAMES
 };

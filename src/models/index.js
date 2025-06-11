@@ -98,6 +98,43 @@ const PostHistory = sequelize.define('PostHistory', {
   timestamps: true
 });
 
+// API Keys model
+const ApiKey = sequelize.define('ApiKey', {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    primaryKey: true
+  },
+  keyHash: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  permissions: {
+    type: DataTypes.JSON,
+    defaultValue: {
+      canSendMessages: true,
+      canSchedule: true,
+      canViewStatus: true,
+      allowedRobots: [1, 2, 3, 4, 5, 6, 7]
+    }
+  },
+  isActive: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true
+  },
+  lastUsed: DataTypes.DATE,
+  createdBy: DataTypes.STRING,
+  expiresAt: DataTypes.DATE
+}, {
+  tableName: 'api_keys',
+  timestamps: true
+});
+
 // Define associations
 Robot.hasMany(ScheduledPost, { foreignKey: 'robotId' });
 ScheduledPost.belongsTo(Robot, { foreignKey: 'robotId' });
@@ -108,5 +145,6 @@ module.exports = {
   sequelize,
   Robot,
   ScheduledPost,
-  PostHistory
+  PostHistory,
+  ApiKey
 };
