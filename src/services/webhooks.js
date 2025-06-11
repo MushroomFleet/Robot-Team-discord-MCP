@@ -1,22 +1,10 @@
 const { WebhookClient } = require('discord.js');
 const { Robot } = require('../models');
+const { getRobotName } = require('../utils/robotNames');
 
 class WebhookService {
   constructor() {
     this.webhooks = new Map();
-    this.robotNames = {
-      1: ':one::robot:',
-      2: ':two::robot:',
-      3: ':three::robot:',
-      4: ':four::robot:',
-      5: ':five::robot:',
-      6: ':six::robot:',
-      7: ':seven::robot:'
-    };
-  }
-
-  getRobotName(robotId) {
-    return this.robotNames[robotId] || `:${robotId}::robot:`;
   }
 
   async initializeWebhooks() {
@@ -52,7 +40,7 @@ class WebhookService {
         throw new Error(`Robot ${robotId} already has a webhook configured`);
       }
 
-      const robotName = this.getRobotName(robotId);
+      const robotName = getRobotName(robotId);
       
       const webhook = await channel.createWebhook({
         name: robotName,
@@ -96,7 +84,7 @@ class WebhookService {
     try {
       const robot = await Robot.findByPk(robotId);
       
-      const robotName = this.getRobotName(robotId);
+      const robotName = getRobotName(robotId);
       
       const message = await webhook.send({
         username: robotName,
@@ -148,7 +136,7 @@ class WebhookService {
         return { success: false, error: 'Webhook not found' };
       }
 
-      const robotName = this.getRobotName(robotId);
+      const robotName = getRobotName(robotId);
       
       // Try to send a test message
       await webhook.send({

@@ -1,4 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
+const { getRobotName } = require('./robotNames');
 
 class RobotEmbedBuilder {
   constructor(robotId) {
@@ -12,19 +13,6 @@ class RobotEmbedBuilder {
       6: 0x00FFFF, // Cyan
       7: 0xFFA500  // Orange
     };
-    this.robotNames = {
-      1: ':one::robot:',
-      2: ':two::robot:',
-      3: ':three::robot:',
-      4: ':four::robot:',
-      5: ':five::robot:',
-      6: ':six::robot:',
-      7: ':seven::robot:'
-    };
-  }
-
-  getRobotName(robotId) {
-    return this.robotNames[robotId] || `:${robotId}::robot:`;
   }
 
   createStandardEmbed(options = {}) {
@@ -78,7 +66,7 @@ class RobotEmbedBuilder {
         },
         {
           name: 'Robot',
-          value: this.getRobotName(this.robotId),
+          value: getRobotName(this.robotId),
           inline: true
         }
       ]

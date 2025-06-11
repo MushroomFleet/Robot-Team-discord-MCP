@@ -1,23 +1,23 @@
 /**
- * Utility for getting proper robot emoji names
+ * Utility for getting proper robot names
  */
 const robotNames = {
-  1: ':one::robot:',
-  2: ':two::robot:',
-  3: ':three::robot:',
-  4: ':four::robot:',
-  5: ':five::robot:',
-  6: ':six::robot:',
-  7: ':seven::robot:'
+  1: 'DJZ Clone 1',
+  2: 'DJZ Clone 2',
+  3: 'DJZ Clone 3',
+  4: 'DJZ Clone 4',
+  5: 'DJZ Clone 5',
+  6: 'DJZ Clone 6',
+  7: 'DJZ Clone 7'
 };
 
 /**
- * Get the proper emoji name for a robot
+ * Get the proper name for a robot
  * @param {number} robotId - Robot ID (1-7)
- * @returns {string} - Proper robot emoji name
+ * @returns {string} - Proper robot name
  */
 function getRobotName(robotId) {
-  return robotNames[robotId] || `:${robotId}::robot:`;
+  return robotNames[robotId] || `DJZ Clone ${robotId}`;
 }
 
 module.exports = {
