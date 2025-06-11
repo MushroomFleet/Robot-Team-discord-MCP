@@ -24,13 +24,13 @@ Each robot has a unique identity and color scheme:
 
 | Robot | Color | Hex Code | Suggested Use Cases |
 |-------|-------|----------|-------------------|
-| :one::robot: | Red | `#FF0000` | Alerts, Urgent Announcements, Critical Updates |
-| :two::robot: | Green | `#00FF00` | Success Messages, Good News, Achievement Posts |
-| :three::robot: | Blue | `#0099FF` | Information, General Announcements, Daily Updates |
-| :four::robot: | Yellow | `#FFFF00` | Warnings, Reminders, Attention-Grabbing Content |
-| :five::robot: | Magenta | `#FF00FF` | Creative Content, Special Events, Unique Announcements |
-| :six::robot: | Cyan | `#00FFFF` | Technical Updates, System Messages, Process Info |
-| :seven::robot: | Orange | `#FFA500` | Community Posts, Social Content, Casual Updates |
+| DJZ Clone 1 | Red | `#FF0000` | Alerts, Urgent Announcements, Critical Updates |
+| DJZ Clone 2 | Green | `#00FF00` | Success Messages, Good News, Achievement Posts |
+| DJZ Clone 3 | Blue | `#0099FF` | Information, General Announcements, Daily Updates |
+| DJZ Clone 4 | Yellow | `#FFFF00` | Warnings, Reminders, Attention-Grabbing Content |
+| DJZ Clone 5 | Magenta | `#FF00FF` | Creative Content, Special Events, Unique Announcements |
+| DJZ Clone 6 | Cyan | `#00FFFF` | Technical Updates, System Messages, Process Info |
+| DJZ Clone 7 | Orange | `#FFA500` | Community Posts, Social Content, Casual Updates |
 
 ### How It Works
 
@@ -247,37 +247,37 @@ All robots should now show:
 
 ### Robot Personality Guide
 
-#### :one::robot: Robot 1 (Red) - The Alerter
+#### DJZ Clone 1 (Red) - The Alerter
 - **Use for**: Critical alerts, system failures, urgent announcements
 - **Tone**: Direct, urgent, action-required
 - **Example content**: "URGENT: Payment system down", "Security breach detected"
 
-#### :two::robot: Robot 2 (Green) - The Celebrator  
+#### DJZ Clone 2 (Green) - The Celebrator  
 - **Use for**: Success stories, achievements, positive news
 - **Tone**: Positive, encouraging, celebratory
 - **Example content**: "Milestone reached!", "Bug fixed successfully"
 
-#### :three::robot: Robot 3 (Blue) - The Informer
+#### DJZ Clone 3 (Blue) - The Informer
 - **Use for**: General information, daily updates, neutral announcements
 - **Tone**: Professional, informative, neutral
 - **Example content**: "Daily metrics", "Schedule updates"
 
-#### :four::robot: Robot 4 (Yellow) - The Warner
+#### DJZ Clone 4 (Yellow) - The Warner
 - **Use for**: Warnings, reminders, attention-needed items
 - **Tone**: Cautionary, helpful, preventive
 - **Example content**: "Maintenance window approaching", "Deadline reminder"
 
-#### :five::robot: Robot 5 (Magenta) - The Creative
+#### DJZ Clone 5 (Magenta) - The Creative
 - **Use for**: Special events, creative content, unique announcements
 - **Tone**: Creative, engaging, special
 - **Example content**: "Creative showcase", "Special events"
 
-#### :six::robot: Robot 6 (Cyan) - The Technical
+#### DJZ Clone 6 (Cyan) - The Technical
 - **Use for**: Technical updates, system information, developer content
 - **Tone**: Technical, precise, detailed
 - **Example content**: "API changes", "System architecture updates"
 
-#### :seven::robot: Robot 7 (Orange) - The Social
+#### DJZ Clone 7 (Orange) - The Social
 - **Use for**: Community content, social updates, casual communication
 - **Tone**: Friendly, social, community-focused
 - **Example content**: "Team building activities", "Casual updates"
@@ -631,13 +631,13 @@ Full changelog: [URL]" title:"Release Notes" image:"[RELEASE_IMAGE_URL]"
 ```
 
 ### Robot Color Reference
-- :one::robot: Red `#FF0000` - Alerts & Urgent
-- :two::robot: Green `#00FF00` - Success & Positive
-- :three::robot: Blue `#0099FF` - Info & General
-- :four::robot: Yellow `#FFFF00` - Warnings & Reminders  
-- :five::robot: Magenta `#FF00FF` - Creative & Special
-- :six::robot: Cyan `#00FFFF` - Technical & System
-- :seven::robot: Orange `#FFA500` - Social & Community
+- DJZ Clone 1: Red `#FF0000` - Alerts & Urgent
+- DJZ Clone 2: Green `#00FF00` - Success & Positive
+- DJZ Clone 3: Blue `#0099FF` - Info & General
+- DJZ Clone 4: Yellow `#FFFF00` - Warnings & Reminders  
+- DJZ Clone 5: Magenta `#FF00FF` - Creative & Special
+- DJZ Clone 6: Cyan `#00FFFF` - Technical & System
+- DJZ Clone 7: Orange `#FFA500` - Social & Community
 
 ---
 

@@ -115,7 +115,7 @@ GET /api/robots/status?robotId=1
   "robots": [
     {
       "id": 1,
-      "name": ":one::robot:",
+      "name": "DJZ Clone 1",
       "isActive": true,
       "hasWebhook": true,
       "isOnline": true,
@@ -138,7 +138,7 @@ GET /api/robots/status?robotId=1
 {
   "robot": {
     "id": 1,
-    "name": ":one::robot:",
+    "name": "DJZ Clone 1",
     "isActive": true,
     "hasWebhook": true,
     "isOnline": true,
@@ -261,7 +261,7 @@ GET /api/schedules?robotId=1&limit=10&active=true
     {
       "id": "uuid-here",
       "robotId": 1,
-      "robotName": ":one::robot:",
+      "robotName": "DJZ Clone 1",
       "content": "Scheduled message",
       "embedData": null,
       "scheduledFor": "2024-01-02T12:00:00.000Z",
@@ -299,7 +299,7 @@ GET /api/schedules/uuid-here
   "schedule": {
     "id": "uuid-here",
     "robotId": 1,
-    "robotName": ":one::robot:",
+    "robotName": "DJZ Clone 1",
     "content": "Scheduled message",
     "embedData": null,
     "scheduledFor": "2024-01-02T12:00:00.000Z",

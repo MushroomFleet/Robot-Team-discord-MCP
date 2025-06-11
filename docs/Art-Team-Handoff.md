@@ -4,7 +4,7 @@
 Design specifications for the Robot-Team Discord bot system requiring 7 unique robot avatars and supporting visual elements.
 
 ## Project Summary
-- **System:** Discord bot with 7 robot personas (:one::robot: through :seven::robot:)
+- **System:** Discord bot with 7 robot personas (DJZ Clone 1 through DJZ Clone 7)
 - **Purpose:** Each robot needs distinct visual identity for scheduled posting
 - **Platform:** Discord (optimized for dark/light themes)
 
@@ -37,13 +37,13 @@ Each robot should have:
 ### 2.1 Robot Color Assignments
 Each robot has a designated primary color for brand consistency:
 
-1. **Robot 1 (:one::robot:):** `#FF0000` (Red)
-2. **Robot 2 (:two::robot:):** `#00FF00` (Green)
-3. **Robot 3 (:three::robot:):** `#0099FF` (Blue)
-4. **Robot 4 (:four::robot:):** `#FFFF00` (Yellow)
-5. **Robot 5 (:five::robot:):** `#FF00FF` (Magenta)
-6. **Robot 6 (:six::robot:):** `#00FFFF` (Cyan)
-7. **Robot 7 (:seven::robot:):** `#FFA500` (Orange)
+1. **DJZ Clone 1:** `#FF0000` (Red)
+2. **DJZ Clone 2:** `#00FF00` (Green)
+3. **DJZ Clone 3:** `#0099FF` (Blue)
+4. **DJZ Clone 4:** `#FFFF00` (Yellow)
+5. **DJZ Clone 5:** `#FF00FF` (Magenta)
+6. **DJZ Clone 6:** `#00FFFF` (Cyan)
+7. **DJZ Clone 7:** `#FFA500` (Orange)
 
 ### 2.2 Color Usage Guidelines
 - **Primary Color:** Main robot body/accent color
@@ -56,13 +56,13 @@ Each robot has a designated primary color for brand consistency:
 ### 3.1 Robot Personality Traits
 Each robot should convey different characteristics:
 
-1. **Robot 1 (Red):** Leader, confident, bold
-2. **Robot 2 (Green):** Nature-loving, calm, efficient
-3. **Robot 3 (Blue):** Analytical, trustworthy, tech-savvy
-4. **Robot 4 (Yellow):** Energetic, creative, optimistic
-5. **Robot 5 (Magenta):** Artistic, unique, expressive
-6. **Robot 6 (Cyan):** Cool, precise, futuristic
-7. **Robot 7 (Orange):** Warm, friendly, approachable
+1. **DJZ Clone 1 (Red):** Leader, confident, bold
+2. **DJZ Clone 2 (Green):** Nature-loving, calm, efficient
+3. **DJZ Clone 3 (Blue):** Analytical, trustworthy, tech-savvy
+4. **DJZ Clone 4 (Yellow):** Energetic, creative, optimistic
+5. **DJZ Clone 5 (Magenta):** Artistic, unique, expressive
+6. **DJZ Clone 6 (Cyan):** Cool, precise, futuristic
+7. **DJZ Clone 7 (Orange):** Warm, friendly, approachable
 
 ### 3.2 Visual Elements
 Consider incorporating:

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide provides step-by-step instructions for creating a Discord bot system that emulates a team of 7 robots (:one::robot: through :seven::robot:) capable of posting scheduled content with rich embeds and individual personas.
+This guide provides step-by-step instructions for creating a Discord bot system that emulates a team of 7 robots (DJZ Clone 1 through DJZ Clone 7) capable of posting scheduled content with rich embeds and individual personas.
 
 ## System Architecture
 

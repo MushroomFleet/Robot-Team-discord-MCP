@@ -1,4 +1,4 @@
-we can use deep research to build a plan for the creation of a discord bot system which emulates a team of 7 robots who will post things according to my schedule in my discord each robot is named ":one::robot:", ":two::robot:", ":three::Robot", etc up to ":seven::robot:"
+we can use deep research to build a plan for the creation of a discord bot system which emulates a team of 7 robots who will post things according to my schedule in my discord each robot is named "DJZ Clone 1", "DJZ Clone 2", "DJZ Clone 3", etc up to "DJZ Clone 7"
 I will use the system to pre-schedule or push posts using each persona.
 It will make posts using discord rich presence for each post.
 we can use the results from the research to refine and enhance the plan.
