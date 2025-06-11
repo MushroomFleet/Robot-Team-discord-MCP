@@ -4,6 +4,19 @@ const { Robot } = require('../models');
 class WebhookService {
   constructor() {
     this.webhooks = new Map();
+    this.robotNames = {
+      1: ':one::robot:',
+      2: ':two::robot:',
+      3: ':three::robot:',
+      4: ':four::robot:',
+      5: ':five::robot:',
+      6: ':six::robot:',
+      7: ':seven::robot:'
+    };
+  }
+
+  getRobotName(robotId) {
+    return this.robotNames[robotId] || `:${robotId}::robot:`;
   }
 
   async initializeWebhooks() {
@@ -39,15 +52,17 @@ class WebhookService {
         throw new Error(`Robot ${robotId} already has a webhook configured`);
       }
 
+      const robotName = this.getRobotName(robotId);
+      
       const webhook = await channel.createWebhook({
-        name: `:${robotId}::robot:`,
+        name: robotName,
         reason: `Robot ${robotId} webhook creation`
       });
 
       // Save webhook details to database
       await Robot.upsert({
         id: robotId,
-        name: `:${robotId}::robot:`,
+        name: robotName,
         webhookId: webhook.id,
         webhookToken: webhook.token,
         avatarUrl: webhook.avatarURL(),
@@ -81,8 +96,10 @@ class WebhookService {
     try {
       const robot = await Robot.findByPk(robotId);
       
+      const robotName = this.getRobotName(robotId);
+      
       const message = await webhook.send({
-        username: `:${robotId}::robot:`,
+        username: robotName,
         avatarURL: robot?.avatarUrl || options.avatarURL,
         content: options.content,
         embeds: options.embeds,
@@ -131,9 +148,11 @@ class WebhookService {
         return { success: false, error: 'Webhook not found' };
       }
 
+      const robotName = this.getRobotName(robotId);
+      
       // Try to send a test message
       await webhook.send({
-        username: `:${robotId}::robot:`,
+        username: robotName,
         content: `🧪 Test message from Robot ${robotId}`,
         embeds: [{
           title: 'Webhook Test',

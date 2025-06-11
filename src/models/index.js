@@ -17,10 +17,7 @@ const Robot = sequelize.define('Robot', {
   },
   name: {
     type: DataTypes.STRING,
-    allowNull: false,
-    defaultValue: function() {
-      return `:${this.getDataValue('id')}::robot:`;
-    }
+    allowNull: false
   },
   webhookId: DataTypes.STRING,
   webhookToken: DataTypes.STRING,

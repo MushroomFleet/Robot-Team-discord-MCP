@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const RobotEmbedBuilder = require('../../utils/embedBuilder');
+const { getRobotName } = require('../../utils/robotNames');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -52,7 +53,7 @@ module.exports = {
       if (!robot || !robot.webhookId || !robot.isActive) {
         const embedBuilder = new RobotEmbedBuilder(robotId);
         const errorEmbed = embedBuilder.createErrorEmbed(
-          new Error(`Robot :${robotId}::robot: is not configured or inactive. Use /init-robot first.`),
+          new Error(`Robot ${getRobotName(robotId)} is not configured or inactive. Use /init-robot first.`),
           'Robot Post'
         );
         return await interaction.editReply({ embeds: [errorEmbed] });
@@ -80,7 +81,7 @@ module.exports = {
       // Send confirmation
       const confirmEmbed = embedBuilder.createSuccessEmbed(
         'Message Posted',
-        `Robot :${robotId}::robot: has posted your message!`
+        `Robot ${getRobotName(robotId)} has posted your message!`
       );
 
       await interaction.editReply({ embeds: [confirmEmbed] });

@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 const RobotEmbedBuilder = require('../../utils/embedBuilder');
+const { getRobotName } = require('../../utils/robotNames');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -33,7 +34,7 @@ module.exports = {
       if (existingRobot && existingRobot.webhookId) {
         const embedBuilder = new RobotEmbedBuilder(robotId);
         const errorEmbed = embedBuilder.createErrorEmbed(
-          new Error(`Robot :${robotId}::robot: already has a webhook configured.`),
+          new Error(`Robot ${getRobotName(robotId)} already has a webhook configured.`),
           'Robot Initialization'
         );
         return await interaction.editReply({ embeds: [errorEmbed] });
@@ -49,7 +50,7 @@ module.exports = {
       const embedBuilder = new RobotEmbedBuilder(robotId);
       const successEmbed = embedBuilder.createSuccessEmbed(
         'Robot Initialized',
-        `Successfully initialized Robot :${robotId}::robot:!\n\n` +
+        `Successfully initialized Robot ${getRobotName(robotId)}!\n\n` +
         `📍 **Webhook created in:** ${channel}\n` +
         `🆔 **Webhook ID:** \`${webhook.id}\`\n` +
         `🤖 **Status:** Active and ready to post`
