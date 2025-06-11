@@ -133,6 +133,38 @@ npm run dev
 /schedule-cancel post-id:abc-123-def
 ```
 
+## 🤖 AI Assistant Integration (MCP)
+
+**NEW!** Control Robot Team Discord bots directly from your AI assistant using the Model Context Protocol (MCP). Send messages, schedule posts, and manage robots with natural language commands!
+
+### 👥 For AI Assistant Users
+Want to control Discord bots from Cline, Claude Desktop, or other AI assistants?
+**👉 [Get Started with MCP Client Handbook](./MCP/MCP-Client-Handbook.md)**
+
+**What you can do:**
+- *"Send a message through Robot 1 saying 'Hello World!'"*
+- *"Schedule Robot 3 to post daily reminders at 9 AM"*
+- *"What's the status of all the robots?"*
+- *"List all scheduled messages for Robot 2"*
+
+### 🛠️ For Server Administrators
+Setting up MCP server for your team or organization?
+**👉 [Deploy with MCP Server Handbook](./MCP/MCP-Server-Handbook.md)**
+
+**Features:**
+- ✅ Secure API key management and user permissions
+- ✅ Production-ready deployment with monitoring
+- ✅ Multi-client support (Cline, Claude Desktop, etc.)
+- ✅ Complete administrative tools and troubleshooting
+
+### 🌉 MCP Integration Benefits
+- **Seamless Control** - Use natural language instead of slash commands
+- **Stay in Flow** - No need to switch between applications
+- **Powerful Automation** - Schedule complex recurring messages
+- **Team Productivity** - Everyone can control bots through their AI assistant
+
+---
+
 ## 🌐 REST API Usage
 
 ### API Authentication
