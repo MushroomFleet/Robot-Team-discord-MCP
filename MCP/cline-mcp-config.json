@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "robot-team": {
+      "command": "node",
+      "args": ["C:/Projects/robot-team/MCP/robot-team-server/robot-team-server/build/index.js"],
+      "env": {
+        "ROBOT_TEAM_API_KEY": "rtk_6f9ec826eb6d4085864648a6d58dce2a",
+        "ROBOT_TEAM_API_URL": "http://localhost:9000"
+      }
+    }
+  }
+}
