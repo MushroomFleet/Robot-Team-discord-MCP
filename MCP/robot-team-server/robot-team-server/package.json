@@ -1,0 +1,27 @@
+{
+  "name": "robot-team-server",
+  "version": "0.1.0",
+  "description": "tools to interact with the Robot Team&#39;s REST API, allowing external applications to Send immediate messages through any of the 7 robots, Schedule one-time or recurring messages, Check robot status, Manage scheduled posts.",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "robot-team-server": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"import('fs').then(fs => fs.chmodSync('build/index.js', '755'))\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}
