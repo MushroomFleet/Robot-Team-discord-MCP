@@ -33,13 +33,13 @@ if (!API_KEY) {
 
 // Robot configuration mapping
 const ROBOT_COLORS = {
-  1: { name: 'Robot 1', color: '#FF0000', emoji: ':one::robot:' },
-  2: { name: 'Robot 2', color: '#00FF00', emoji: ':two::robot:' },
-  3: { name: 'Robot 3', color: '#0099FF', emoji: ':three::robot:' },
-  4: { name: 'Robot 4', color: '#FFFF00', emoji: ':four::robot:' },
-  5: { name: 'Robot 5', color: '#FF00FF', emoji: ':five::robot:' },
-  6: { name: 'Robot 6', color: '#00FFFF', emoji: ':six::robot:' },
-  7: { name: 'Robot 7', color: '#FFA500', emoji: ':seven::robot:' },
+  1: { name: 'DJZ Clone 1', color: '#FF0000', emoji: ':one::robot:' },
+  2: { name: 'DJZ Clone 2', color: '#00FF00', emoji: ':two::robot:' },
+  3: { name: 'DJZ Clone 3', color: '#0099FF', emoji: ':three::robot:' },
+  4: { name: 'DJZ Clone 4', color: '#FFFF00', emoji: ':four::robot:' },
+  5: { name: 'DJZ Clone 5', color: '#FF00FF', emoji: ':five::robot:' },
+  6: { name: 'DJZ Clone 6', color: '#00FFFF', emoji: ':six::robot:' },
+  7: { name: 'DJZ Clone 7', color: '#FFA500', emoji: ':seven::robot:' },
 };
 
 // Type definitions
